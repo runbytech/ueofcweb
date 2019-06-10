@@ -1,0 +1,532 @@
+/**
+ * seperate frome style.css @2019/06/09 
+ */
+
+/* Media Queries
+--------------------------------------------- */
+@media all and (max-width : 991px) {
+  #logo {
+      display: block;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+      float: none;
+  }
+
+  nav {
+      margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle+a,
+  .menu {
+      display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+      display: block;
+      padding: 6px 12px;
+      font-size: 14px;
+      text-decoration: none;
+      border: none;
+      float: right;
+      color: #000;
+      font-weight: 500;
+      letter-spacing: 1px;
+      border: 1px solid #000;
+      margin-bottom: 0;
+      cursor: pointer;
+      -webkit-border-radius: 4px;
+      -o-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      transition: 0.5s all;
+      -webkit-transition: 0.5s all;
+      -moz-transition: 0.5s all;
+      -o-transition: 0.5s all;
+      -ms-transition: 0.5s all;
+  }
+
+  .menu .toggle {
+      float: none;
+      text-align: center;
+      margin: auto;
+      max-width: 120px;
+      padding: 5px;
+      font-size: 14px;
+      letter-spacing: .5px;
+      color: #202428;
+      font-weight: 400;
+      border: none;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^=drop]:checked+ul {
+      display: block;
+      background: #fff;
+      padding: 15px 0;
+      text-align: center;
+      width: 100%;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+      display: block;
+      width: 100%;
+      padding: 5px 0;
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+      background-color: transparent;
+  }
+
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+      float: none;
+      position: static;
+      color: #fff;
+      /* has to be the same number as the "line-height" of "nav a" */
+  }
+
+  /* Hide menus on hover */
+  nav ul ul li:hover>ul,
+  nav ul li:hover>ul {
+      display: none;
+  }
+
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+      display: block;
+      width: 100%;
+      padding: 0;
+  }
+
+  nav ul ul ul li {
+      position: static;
+      /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+
+  nav ul ul li a {
+      color: #000;
+      font-size: 15px;
+      padding: 0;
+  }
+}
+
+/* responsive */
+@media(max-width: 1366px) {
+  h3.w3ls_pvt-title {
+      font-size: 3.5rem;
+  }
+}
+
+@media(max-width: 1280px) {
+
+  h3.tittle,
+  h2.tittle {
+      font-size: 38px;
+  }
+}
+
+@media(max-width: 1080px) {
+  .about-in .card {
+      padding: 2.5em 1em;
+  }
+
+  .about-grid-main h4,
+  .about-in h5.card-title {
+      font-size: 21px;
+  }
+
+  .about-grid-main {
+      padding: 3em 2em;
+  }
+
+  h3.w3ls_pvt-title {
+      font-size: 3rem;
+  }
+
+  p.text-sty-banner {
+      font-size: 15px;
+  }
+
+  #logo a {
+      font-size: 30px;
+  }
+
+  nav a {
+      font-size: 14px;
+      margin: 0 8px;
+  }
+
+  .price-info {
+      padding: 0 .5em;
+  }
+
+  .prices-top {
+      left: 32%;
+  }
+}
+
+@media(max-width: 1024px) {
+  .parts-w3ls span {
+      font-size: 2.5em;
+  }
+
+  .parts-w3ls h4 {
+      font-size: 14px;
+  }
+
+  .accordion-item-hd {
+      font-size: 14px;
+  }
+
+  .contact-wthree-do .form-control {
+      font-size: 14px;
+  }
+}
+
+@media(max-width: 991px) {
+
+  h3.tittle,
+  h2.tittle {
+      font-size: 36px;
+  }
+
+  p.sub-tittle {
+      font-size: 15px;
+  }
+
+  .about-in .card,
+  .about-grid-main {
+      max-width: 500px;
+      margin: 0 auto;
+  }
+
+  .about-grid-main {
+      padding: 3em;
+  }
+
+  h3.w3ls_pvt-title {
+      font-size: 2.5rem;
+  }
+
+  p.text-sty-banner {
+      font-size: 14px;
+  }
+
+  .w3ls_banner_txt {
+      padding-top: 3vw;
+  }
+
+  #logo a {
+      font-size: 26px;
+  }
+
+  .services-icon {
+      padding: 0 .5em;
+  }
+
+  .services-grid {
+      padding: 0;
+  }
+
+  .services-icon span {
+      font-size: 30px;
+      margin-top: 1.5em;
+  }
+
+  .price-info {
+      padding: 0 1em;
+  }
+
+  .prices-top {
+      left: 38%;
+  }
+
+  .price-info.price-mkres {
+      margin-top: 6em;
+  }
+}
+
+@media(max-width: 768px) {
+
+  h3.tittle,
+  h2.tittle {
+      font-size: 34px;
+  }
+}
+
+@media(max-width: 736px) {
+  h3.title-w3 {
+      font-size: 30px;
+  }
+
+  p.title-sub-2 {
+      font-size: 17px;
+  }
+
+  .about-right-faq h6 {
+      font-size: 14px;
+  }
+
+  .about-right-faq h3 {
+      font-size: 32px;
+  }
+
+  ul.w3l-right-book li {
+      font-size: 15px;
+  }
+
+  .button-style {
+      padding: 13px 24px;
+      font-size: 13px;
+  }
+
+  .services-icon,
+  .services-grid {
+      padding: 0 1em;
+  }
+
+  .services-icon span {
+      font-size: 34px;
+      margin-top: .8em;
+  }
+
+  h4.text-team-w3 {
+      font-size: 18px;
+  }
+
+  .prices-top {
+      left: 32%;
+  }
+
+  .prices-bottom h4 {
+      font-size: 24px;
+  }
+
+  .prices-bottom ul li {
+      font-size: 15px;
+  }
+}
+
+@media(max-width: 640px) {
+
+  h3.tittle,
+  h2.tittle {
+      font-size: 30px;
+  }
+
+  p.sub-tittle {
+      font-size: 14px;
+  }
+
+  form.subscribe-wthree input[type="email"] {
+      font-size: 14px;
+  }
+
+  form.subscribe-wthree button {
+      font-size: 15px;
+  }
+}
+
+@media(max-width: 568px) {
+
+  .ab-content-inner,
+  .price-info {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+
+  .price-info:nth-child(2) {
+      margin-top: 6em;
+  }
+
+  .prices-top {
+      left: 39%;
+  }
+
+  .w3l-map iframe {
+      min-height: 300px;
+  }
+}
+
+@media(max-width: 480px) {
+  h3.title-w3 {
+      font-size: 26px;
+  }
+
+  p.title-sub-2 {
+      font-size: 16px;
+  }
+
+  .about-grid-main {
+      padding: 3em 2em;
+  }
+
+  h3.w3ls_pvt-title {
+      font-size: 2.3rem;
+  }
+
+  img.shape-w3-one {
+      right: 6%;
+  }
+
+  .accordion-item-hd {
+      font-size: 13px;
+  }
+
+  .map-background {
+    margin: 2px auto;
+    width: 98%;
+    height: 390px;
+    background-image: url(../images/halifax_534x440.png)
+}
+}
+
+@media(max-width: 440px) {
+  p.sub-tittle {
+      font-size: 13px;
+  }
+
+  h3.tittle,
+  h2.tittle {
+      font-size: 28px;
+  }
+
+  p {
+      font-size: 13px;
+  }
+
+  nav a {
+      font-size: 13px;
+  }
+
+  .search-w3layouts input[type="search"] {
+      font-size: 12px;
+  }
+
+  .search-w3layouts button {
+      font-size: 13px;
+  }
+}
+
+@media(max-width: 414px) {
+  .parts-w3ls span {
+      font-size: 2em;
+  }
+
+  .parts-w3ls h4 {
+      font-size: 12px;
+      letter-spacing: 1px;
+  }
+
+  .about-right-faq h3 {
+      font-size: 30px;
+  }
+
+  .about-grid-main {
+      padding: 2em 1.5em;
+  }
+}
+
+@media(max-width: 384px) {
+  .prices-top {
+      left: 37%;
+  }
+
+  .w3l-map iframe {
+      min-height: 280px;
+  }
+}
+
+@media(max-width: 375px) {
+  form.subscribe-wthree button {
+      font-size: 14px;
+      padding: 13px 15px;
+  }
+
+  form.subscribe-wthree input[type="email"] {
+      font-size: 13px;
+      padding: 13px 11px;
+  }
+
+  .about-right-faq h3 {
+      font-size: 28px;
+  }
+
+  .about-right-faq h6 {
+      font-size: 13px;
+  }
+
+  h3.w3ls_pvt-title {
+      font-size: 2.1rem;
+  }
+
+  p.text-sty-banner {
+      font-size: 13px;
+  }
+
+  .search-w3layouts input[type="search"] {
+      padding: 10px 15px;
+  }
+
+  .dwn-w3ls {
+      width: 40px;
+      height: 40px;
+  }
+
+  .dwn-w3ls span {
+      font-size: 15px;
+      line-height: 26px;
+  }
+
+  h6.accordion-textm {
+      font-size: 16px;
+  }
+
+  .contact-wthree-do .form-control {
+      font-size: 13px;
+  }
+
+  button.btn-cont-w3 {
+      font-size: 15px;
+  }
+}
+
+@media(max-width: 320px) {
+  h3.title-w3 {
+      font-size: 24px;
+  }
+
+  p.title-sub-2 {
+      font-size: 14px;
+  }
+
+  .count-w3ls h4 {
+      font-size: 28px;
+  }
+
+  .about-right-faq h3 {
+      font-size: 26px;
+  }
+
+  ul.w3l-right-book li {
+      font-size: 14px;
+  }
+
+  .button-style {
+      padding: 13px 20px;
+      font-size: 12px;
+  }
+
+  .prices-top {
+      left: 35%;
+  }
+}
+
+/* //responsive */
