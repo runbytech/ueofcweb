@@ -51,8 +51,8 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
 }
 
 p {
@@ -1006,6 +1006,10 @@ h3.sec-hedadc {
     border: 1px solid #ddd;
 }
 
+.prices-h {
+    padding: 2rem 2rem .5rem 2rem;
+}
+
 .price-info:hover .prices,
 .prices.active {
     -webkit-box-shadow: 1px 2px 16px 2px #d8d8d8;
@@ -1020,7 +1024,7 @@ h3.sec-hedadc {
 
 .prices-top {
     position: absolute;
-    top: -18%;
+    top: -10%;
     left: 34%;
 }
 
@@ -1127,4 +1131,202 @@ button.btn-cont-w3 {
     width: 98%;
     height: 390px;
     background-image: url(../images/halifax_1226x400.png)
+}
+
+/* for product page */
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 30px;
+    color: #222222;
+    display: inline-block;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    position: relative;
+}
+
+/* Services Item */
+.services-item {
+    min-height: 315px;
+    max-height: 315px;
+    background: #fff;
+    margin: 15px 0;
+    padding: 30px;
+    border-radius: 4px;
+    text-align: left;
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+}
+
+.services-item .icon i {
+  font-size: 42px;
+  color: #05b993;
+}
+
+.services-item .services-content h3 {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.services-item .services-content h3 a {
+  font-size: 18px;
+  color: #585b60;
+}
+
+.services-item .services-content h3 a:hover {
+  color: #05b993;
+}
+
+.services-item:hover {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.08);
+}
+
+#service {
+  position: relative;
+}
+
+
+/* carousel gallery for product */
+.ftco-project .owl-carousel {
+    margin: 0; 
+}
+
+.ftco-project .owl-carousel .owl-stage-outer {
+    padding-top: 0;
+    padding-bottom: 0;
+    position: relative; 
+}
+  
+.ftco-section {
+    padding: 0 0 3em 0;
+    position: relative; 
+}
+
+.ftco-project .owl-dots {
+    text-align: center; 
+}
+    
+.ftco-project .owl-dots .owl-dot {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1); 
+}
+      
+.ftco-project .owl-dots .owl-dot.active {
+    background: #05b993; 
+}
+  
+.project {
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    z-index: 0;
+    margin-bottom: 50px; 
+}
+
+.project .img {
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    -webkit-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 42px 29px -31px rgba(0, 0, 0, 0.05); 
+}
+
+.project img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    z-index: -1;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease; 
+}
+
+.project .text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em 0;
+    background: rgba(255, 255, 255, 0.9);
+    background: #05b993;
+    opacity: 0;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -webkit-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease; 
+}
+
+.project .text span {
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.8); 
+}
+
+.project .text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 0; 
+}
+
+.project .text h3 a {
+    color: #fff; 
+}
+
+.project:hover .text, .project:focus .text {
+    opacity: 1; 
+}
+
+.project:hover .text .price, .project:focus .text .price {
+    background: #05b993; 
+}
+
+.project:hover .icon, .project:focus .icon {
+    bottom: 50%;
+    opacity: 1; 
+}
+
+.project:hover img, .project:focus img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); 
+}
+   
+
+@media (max-width: 767.98px) {
+    .ftco-section {
+        padding: 6em 0; 
+    } 
+}
+  
+
+/* end of product style */
+
+.prices-bottom ul li.del {
+    text-decoration: line-through;
+    color: #DDD;
 }

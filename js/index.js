@@ -3,14 +3,6 @@
  * @2019/06/11
  */
 
-
- var moreBtns = document.querySelectorAll(".read-more");
- moreBtns.forEach(function(btn){
-  btn.addEventListener('click', () => {
-    window.scrollBy(0, 700)
-  })
- })
-
  var cpBtn = document.querySelector(".cp-btn");
  var email = document.querySelector('.em-ipt');
  cpBtn.addEventListener('click', () => {
@@ -23,6 +15,14 @@
     } catch (err) {
       console.log('Oops, unable to copy');
     }
-    console.log('copy!');
+    cpBtn.innerHTML = "Copied!";
 
  })
+
+ var onePageClick = function() {
+  $(document).on('click', 'a[href="#"]', function (event) {
+    event.preventDefault();
+  });
+};
+
+onePageClick();

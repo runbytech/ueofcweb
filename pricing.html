@@ -22,22 +22,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+		function insertScript(src, callback){
+			var script = document.createElement('script');
+			script.type= "text/javascript";
+			script.onload = callback;
+			script.src = src;
+			document.body.appendChild(script);
+			return script;
+		}
+		setTimeout(function(){
+			insertScript("js/jquery-3.2.1.min.js", function(){
+				insertScript("js/index.js")
+			})
+		},1000);
+
 	</script>
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="icon" type="image/png" href="/images/icon-puple-16.png" sizes="16x16" >
-	<link rel="icon" type="image/png" href="/images/icon-puple-32.png" sizes="32x32" >
-	<link rel="shortcut icon" href="/images/icon-puple-48.png?v=1261f0b3ee707b6da63cb02872a094be">
+	<link rel="icon" type="image/png" href="images/icon-puple-16.png" sizes="16x16" >
+	<link rel="icon" type="image/png" href="images/icon-puple-32.png" sizes="32x32" >
+	<link rel="shortcut icon" href="images/icon-puple-48.png?v=1261f0b3ee707b6da63cb02872a094be">
 	<!-- Bootstrap-Core-CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Font-Awesome-Icons-CSS -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<!-- //Custom-Files -->
+	<link href="css/all.css" rel="stylesheet">
 	<!-- Web-Fonts -->
 	<link href="css/fonts.css" rel="stylesheet">
+	
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- //Custom-Files -->
 	<!-- //responsive layout from style.css -->
 	<link href="css/responsive.css" rel="stylesheet">
 
@@ -70,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="product.html">Product</a></li>
 								<li><a href="pricing.html" class="active">Pricing</a></li>
 								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="about.html">About Us</a></li>
+								<!-- <li><a href="about.html">About Us</a></li> -->
 							</ul>
 						</nav>
 					</div>
@@ -80,13 +95,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="search-w3layouts mr-3">
 							<form action="#" method="post" class="search-bottom-wthree d-flex">
 								<input class="search" type="search" placeholder="Search Here..." required="">
-								<button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
+								<button class="form-control btn" type="submit">
+									<span class="fa fa-search"></span>
+								</button>
 							</form>
 						</div>
 						<!-- //search -->
 						<!-- download -->
 						<a class="dwn-w3ls btn" href="https://github.com/runbytech/ultron-ele" target="_blank">
-							<span class="fa fa-github"></span>
+							<span class="fab fa-github"></span>
 						</a>
 						<!-- //download -->
 					</div>
@@ -111,82 +128,87 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-5 py-lg-3">
 			<div class="inner_sec_info_w3_info mt-3">
 				<div class="row price-grid-main">
-					<div class="col-lg-3 col-sm-6 price-info">
+
+					<div class="col-lg-4 col-sm-6 price-info">
 						<div class="prices p-4">
+							<div class="prices-top">
+								<h3 class="text-center text-wh rounded-circle">$0</h3>
+							</div>
+							<div class="prices-bottom text-center">
+								<div class="prices-h border-bottom ">
+									<h4>HONOR MBR</h4>
+								</div>
+								<ul class="mt-4">
+									<li>Deployment Support</li>
+									<li>Usage Guidance</li>
+									<li>Config Modification</li>
+									<li class="del">Charge</li>
+									<li class="del">Template Development</li>
+									<li class="del">Data Access & Storage</li>
+									<li class="del">3rd Part Service Integration</li>
+									<!-- <li>Email/WhatsApp</li> -->
+								</ul>
+								<a href="https://ultronele.netlify.com/service" class="btn button-style mt-4" target="_blank">
+									Details
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-4 col-sm-6  price-info price-mkres-2">
+						<div class="prices p-4 active">
 							<div class="prices-top">
 								<h3 class="text-center text-wh rounded-circle">$30</h3>
 							</div>
 							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Standard</h4>
+								<div class="prices-h border-bottom ">
+									<h4>SPONSOR MBR</h4>
 								</div>
 								<ul class="mt-4">
-									<li>Community Access</li>
-									<li>Annual Reports</li>
-									<li>Free Support</li>
-									<li>Expert Reviews</li>
-								</ul>
-								<a href="#" class="btn button-style mt-4">Purchase</a>
+										<li>Deployment Support</li>
+										<li>Usage Guidance</li>
+										<li>Config Modification</li>
+										<li>Charge</li>
+										<li>Template Development</li>
+										<li class="del" >Data Access & Storage</li>
+										<li class="del" >3rd Part Service Integration</li>
+										<!-- <li>Email/WhatsApp/Phone</li> -->
+									</ul>
+									<a href="https://ultronele.netlify.com/service" class="btn button-style mt-4" target="_blank">
+										Details
+									</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-sm-6  price-info price-mkres-2">
-						<div class="prices p-4 active">
-							<div class="prices-top">
-								<h3 class="text-center text-wh rounded-circle">$80</h3>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Premium</h4>
-								</div>
-								<ul class="mt-4">
-									<li>Limitless Concepts</li>
-									<li>Annual Reports</li>
-									<li>Free Support</li>
-									<li>Expert Reviews</li>
-								</ul>
-								<a href="#" class="btn button-style mt-4">Purchase</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-sm-6  price-info price-mkres">
+
+					<div class="col-lg-4 col-sm-6  price-info price-mkres">
 						<div class="prices p-4">
 							<div class="prices-top">
-								<h3 class="text-center text-wh rounded-circle">$60</h3>
+								<h3 class="text-center text-wh rounded-circle">$50</h3>
 							</div>
 							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
+								<div class="prices-h border-bottom">
 									<h4>Golden</h4>
 								</div>
 								<ul class="mt-4">
-									<li>Community Access</li>
-									<li>Annual Reports</li>
-									<li>Free Support</li>
-									<li>Expert Reviews</li>
-								</ul>
-								<a href="#" class="btn button-style mt-4">Purchase</a>
+										<li>Deployment Support</li>
+										<li>Usage Guidance</li>
+										<li>Config Modification</li>
+										<li>Charge</li>
+										<li>Template Development</li>
+										<li>Data Access & Storage</li>
+										<li>3rd Part Service Integration</li>
+										<!-- <li>Email/WhatsApp/Phone/On site</li> -->
+									</ul>
+								<a href="https://ultronele.netlify.com/service" class="btn button-style mt-4" target="_blank">
+									Details
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-3 col-sm-6  price-info price-mkres">
-						<div class="prices p-4 active">
-							<div class="prices-top">
-								<h3 class="text-center text-wh rounded-circle">$30</h3>
-							</div>
-							<div class="prices-bottom text-center">
-								<div class="prices-h border-bottom p-4">
-									<h4>Ultimate</h4>
-								</div>
-								<ul class="mt-4">
-									<li>Limitless Concepts</li>
-									<li>Annual Reports</li>
-									<li>Free Support</li>
-									<li>Expert Reviews</li>
-								</ul>
-								<a href="#" class="btn button-style mt-4">Purchase</a>
-							</div>
-						</div>
-					</div>
+
+					
+
 				</div>
 			</div>
 		</div>
@@ -195,24 +217,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- footer -->
 	<footer class="bg-li py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<!-- subscribe -->
-			<div class="subscribe mx-auto">
-				<div class="icon-effect-w3">
-					<span class="fa fa-envelope"></span>
-				</div>
-				<h2 class="tittle text-center font-weight-bold">Stay Updated!</h2>
-				<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-				<form action="#" method="post" class="subscribe-wthree pt-2">
-					<div class="d-flex subscribe-wthree-field">
-						<input class="form-control" type="email" placeholder="Enter your email..." name="email" required="">
-						<button class="btn form-control w-50" type="submit">Subscribe</button>
+			<div class="container py-xl-5 py-lg-3">
+				<!-- subscribe -->
+				<div class="subscribe mx-auto">
+					<div class="icon-effect-w3">
+						<span class="fa fa-envelope"></span>
 					</div>
-				</form>
+					<h2 class="tittle text-center font-weight-bold">Stay Connected!</h2>
+					<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Feel free to send email to me, I'll reply to you even the tinyest questions!</p>
+					<form action="#" method="post" class="subscribe-wthree pt-2">
+						<div class="d-flex subscribe-wthree-field">
+							<input class="form-control em-ipt" type="email" value="lwz7512@gmail.com" name="email" required="">
+							<button class="btn form-control w-50 cp-btn" type="button">Copy</button>
+						</div>
+					</form>
+				</div>
+				<!-- //subscribe -->
 			</div>
-			<!-- //subscribe -->
-		</div>
 	</footer>
 	<!-- //footer -->
 	<!-- copyright bottom -->
@@ -224,22 +245,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="list-unstyled">
 						<li>
 							<a href="#">
-								<span class="fa fa-facebook"></span>
+								<span class="fab fa-facebook"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-twitter"></span>
+								<span class="fab fa-twitter"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-google-plus"></span>
+								<span class="fab fa-google-plus"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-instagram"></span>
+								<span class="fab fa-instagram"></span>
 							</a>
 						</li>
 					</ul>
@@ -247,14 +268,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //footer social icons -->
 				<!-- copyright -->
 				<div class="copy_right mx-md-auto mb-md-0 mb-3">
-					<p class="text-bl let">© 2019 Startup. All rights reserved | Design by
+					<p class="text-bl let">© 2019 Runbytech. All rights reserved | Design by
 						<a href="http://w3layouts.com/" target="_blank">W3layouts</a>
 					</p>
 				</div>
 				<!-- //copyright -->
 				<!-- move top icon -->
 				<a href="#home" class="move-top text-center">
-					<span class="fa fa-level-up" aria-hidden="true"></span>
+						<i class="fa fa-level-up-alt" aria-hidden="true"></i>
 				</a>
 				<!-- //move top icon -->
 			</div>

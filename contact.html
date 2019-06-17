@@ -22,22 +22,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+		function insertScript(src, callback){
+			var script = document.createElement('script');
+			script.type= "text/javascript";
+			script.onload = callback;
+			script.src = src;
+			document.body.appendChild(script);
+			return script;
+		}
+		setTimeout(function(){
+			insertScript("js/jquery-3.2.1.min.js", function(){
+				insertScript("js/index.js")
+			})
+		},1000);
+
 	</script>
 	<!-- //Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="icon" type="image/png" href="/images/icon-puple-16.png" sizes="16x16" >
-	<link rel="icon" type="image/png" href="/images/icon-puple-32.png" sizes="32x32" >
-	<link rel="shortcut icon" href="/images/icon-puple-48.png?v=1261f0b3ee707b6da63cb02872a094be">
+	<link rel="icon" type="image/png" href="images/icon-puple-16.png" sizes="16x16" >
+	<link rel="icon" type="image/png" href="images/icon-puple-32.png" sizes="32x32" >
+	<link rel="shortcut icon" href="images/icon-puple-48.png?v=1261f0b3ee707b6da63cb02872a094be">
 	<!-- Bootstrap-Core-CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Font-Awesome-Icons-CSS -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
-	<!-- //Custom-Files -->
+	<link href="css/all.css" rel="stylesheet">
+	
 	<!-- Web-Fonts -->
 	<link href="css/fonts.css" rel="stylesheet">
+	<!-- //Custom-Files -->
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- //responsive layout from style.css -->
 	<link href="css/responsive.css" rel="stylesheet">
 
@@ -70,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="product.html">Product</a></li>
 								<li><a href="pricing.html">Pricing</a></li>
 								<li><a href="contact.html" class="active">Contact Us</a></li>
-								<li><a href="about.html">About Us</a></li>
+								<!-- <li><a href="about.html">About Us</a></li> -->
 							</ul>
 						</nav>
 					</div>
@@ -80,13 +95,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="search-w3layouts mr-3">
 							<form action="#" method="post" class="search-bottom-wthree d-flex">
 								<input class="search" type="search" placeholder="Search Here..." required="">
-								<button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
+								<button class="form-control btn" type="submit">
+									<span class="fa fa-search"></span>
+								</button>
 							</form>
 						</div>
 						<!-- //search -->
 						<!-- download -->
 						<a class="dwn-w3ls btn" href="https://github.com/runbytech/ultron-ele" target="_blank">
-							<span class="fa fa-github"></span>
+							<span class="fab fa-github"></span>
 						</a>
 						<!-- //download -->
 					</div>
@@ -123,13 +140,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<label>
 											First name
 										</label>
-										<input class="form-control" type="text" placeholder="Anderson" name="name" required="">
+										<input class="form-control" type="text" placeholder="Wenzhi" name="name" required="">
 									</div>
 									<div class="col-md-6 mt-md-0 mt-4">
 										<label>
 											Last name
 										</label>
-										<input class="form-control" type="text" placeholder="John" name="name" required="">
+										<input class="form-control" type="text" placeholder="Li" name="name" required="">
 									</div>
 								</div>
 							</div>
@@ -139,13 +156,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<label>
 											Mobile
 										</label>
-										<input class="form-control" type="text" placeholder="xxxx xxxx xx" name="mobile" required="">
+										<input class="form-control" type="text" placeholder="902-2377065" name="mobile" required="">
 									</div>
 									<div class="col-md-6 mt-md-0 mt-4">
 										<label>
 											Email
 										</label>
-										<input class="form-control" type="email" placeholder="example@mail.com" name="email" required="">
+										<input class="form-control" type="email" placeholder="lwz7512@gmail.com" name="email" required="">
 									</div>
 								</div>
 							</div>
@@ -153,15 +170,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<div class="row">
 									<div class="col-md-12">
 										<label>
-											Your message
+											Address
 										</label>
-										<textarea placeholder="Add your Description here" name="message" class="form-control"></textarea>
+										<textarea placeholder="40 Bedros Lane, Bedford, NS, Canada, B3M4X1" name="message" class="form-control"></textarea>
 									</div>
 								</div>
 							</div>
 							<div class="row mt-3">
 								<div class="col-md-12">
-									<button type="submit" class="btn btn-cont-w3 btn-block mt-4">Send</button>
+									<!-- <button type="submit" class="btn btn-cont-w3 btn-block mt-4">Send</button> -->
 								</div>
 							</div>
 						</form>
@@ -180,24 +197,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- footer -->
 	<footer class="bg-li py-5">
-		<div class="container py-xl-5 py-lg-3">
-			<!-- subscribe -->
-			<div class="subscribe mx-auto">
-				<div class="icon-effect-w3">
-					<span class="fa fa-envelope"></span>
-				</div>
-				<h2 class="tittle text-center font-weight-bold">Stay Updated!</h2>
-				<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Sed do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
-				<form action="#" method="post" class="subscribe-wthree pt-2">
-					<div class="d-flex subscribe-wthree-field">
-						<input class="form-control" type="email" placeholder="Enter your email..." name="email" required="">
-						<button class="btn form-control w-50" type="submit">Subscribe</button>
+			<div class="container py-xl-5 py-lg-3">
+				<!-- subscribe -->
+				<div class="subscribe mx-auto">
+					<div class="icon-effect-w3">
+						<span class="fa fa-envelope"></span>
 					</div>
-				</form>
+					<h2 class="tittle text-center font-weight-bold">Stay Connected!</h2>
+					<p class="sub-tittle text-center mt-3 mb-sm-5 mb-4">Feel free to send email to me, I'll reply to you even the tinyest questions!</p>
+					<form action="#" method="post" class="subscribe-wthree pt-2">
+						<div class="d-flex subscribe-wthree-field">
+							<input class="form-control em-ipt" type="email" value="lwz7512@gmail.com" name="email" required="">
+							<button class="btn form-control w-50 cp-btn" type="button">Copy</button>
+						</div>
+					</form>
+				</div>
+				<!-- //subscribe -->
 			</div>
-			<!-- //subscribe -->
-		</div>
 	</footer>
 	<!-- //footer -->
 	<!-- copyright bottom -->
@@ -209,22 +225,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="list-unstyled">
 						<li>
 							<a href="#">
-								<span class="fa fa-facebook"></span>
+								<span class="fab fa-facebook"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-twitter"></span>
+								<span class="fab fa-twitter"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-google-plus"></span>
+								<span class="fab fa-google-plus"></span>
 							</a>
 						</li>
 						<li>
 							<a href="#">
-								<span class="fa fa-instagram"></span>
+								<span class="fab fa-instagram"></span>
 							</a>
 						</li>
 					</ul>
@@ -232,14 +248,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //footer social icons -->
 				<!-- copyright -->
 				<div class="copy_right mx-md-auto mb-md-0 mb-3">
-					<p class="text-bl let">© 2019 Startup. All rights reserved | Design by
+					<p class="text-bl let">© 2019 Runbytech. All rights reserved | Design by
 						<a href="http://w3layouts.com/" target="_blank">W3layouts</a>
 					</p>
 				</div>
 				<!-- //copyright -->
 				<!-- move top icon -->
 				<a href="#home" class="move-top text-center">
-					<span class="fa fa-level-up" aria-hidden="true"></span>
+						<i class="fa fa-level-up-alt" aria-hidden="true"></i>
 				</a>
 				<!-- //move top icon -->
 			</div>

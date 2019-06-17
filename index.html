@@ -22,6 +22,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		function hideURLbar() {
 			window.scrollTo(0, 1);
 		}
+
+		function insertScript(src, callback){
+			var script = document.createElement('script');
+			script.type= "text/javascript";
+			script.onload = callback;
+			script.src = src;
+			document.body.appendChild(script);
+			return script;
+		}
+		setTimeout(function(){
+			insertScript("js/jquery-3.2.1.min.js", function(){
+				insertScript("js/index.js")
+			})
+		},1000);
+
 	</script>
 	<!-- //Meta tag Keywords -->
 
@@ -31,17 +46,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<link rel="shortcut icon" href="images/icon-puple-48.png?v=1261f0b3ee707b6da63cb02872a094be">
 	<!-- Bootstrap-Core-CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Font-Awesome-Icons-CSS -->
 	<link href="css/all.css" rel="stylesheet">
-	<!-- <link href="css/font-awesome.min.css" rel="stylesheet"> -->
-	<!-- //Custom-Files -->
+	
 	<!-- Web-Fonts -->
 	<link href="css/fonts.css" rel="stylesheet">
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- //Custom-Files -->
 	<!-- //responsive layout from style.css -->
 	<link href="css/responsive.css" rel="stylesheet">
-
 </head>
 
 <body>
@@ -71,7 +85,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<li><a href="product.html">Product</a></li>
 								<li><a href="pricing.html">Pricing</a></li>
 								<li><a href="contact.html">Contact Us</a></li>
-								<li><a href="about.html">About Us</a></li>
+								<!-- <li><a href="about.html">About Us</a></li> -->
 							</ul>
 						</nav>
 					</div>
@@ -81,13 +95,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="search-w3layouts mr-3">
 							<form action="#" method="post" class="search-bottom-wthree d-flex">
 								<input class="search" type="search" placeholder="Search Here..." required="">
-								<button class="form-control btn" type="submit"><span class="fa fa-search"></span></button>
+								<button class="form-control btn" type="submit">
+									<span class="fa fa-search"></span>
+								</button>
 							</form>
 						</div>
 						<!-- //search -->
 						<!-- download -->
 						<a class="dwn-w3ls btn" href="https://github.com/runbytech/ultron-ele" target="_blank">
-							<span class="fa fa-github"></span>
+							<span class="fab fa-github"></span>
 						</a>
 						<!-- //download -->
 					</div>
@@ -103,7 +119,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="w3ls_banner_txt">
 						<h3 class="w3ls_pvt-title">Deliver Knowledge <br><span>With Fun</span></h3>
 						<p class="text-sty-banner">UltronEle is a light, fast, simple yet interesting serverless e-learning CMS based on GatsbyJS. It aims to provide a easy-use product for tutors, teachers, instructors from all kinks of fields with near-zero efforts to setup their own authoring tool and content publish website.</p>
-						<a href="javascript:void(0)" class="btn button-style mt-md-5 mt-4 read-more">Read More</a>
+						<a href="https://ultronele.netlify.com/userguide" target="_blank"
+							 class="btn button-style mt-md-5 mt-4 read-more">Get Started</a>
 					</div>
 					<div class="banner-img">
 						<img src="images/banner-ovw2.png" alt="" class="img-fluid">
@@ -172,7 +189,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="row">
 				<div class="col-lg-6 about-right-faq">
 					<h6>Product Usage Scenarios</h6>
-					<h3 class="text-da">Whom we can serve to with ultronele exactly?</h3>
+					<h3 class="text-da">Whom we can serve with ultronele exactly?</h3>
 					<p class="mt-4">UltronEle open many possiblities for users who may want to do such things but hardly to accomplish with other existing software:</p>
 					<ul class="w3l-right-book mt-4">
 						<li>Small company training for new employees</li>
@@ -181,7 +198,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<li>Teachers or tutors who want to create, deliver knowledge with zero pain for tech </li>
 						<li>Anyone who want to share knowledge in an acceptable and innovative way </li>
 					</ul>
-					<a href="javascript:void(0)" class="btn button-style button-style-2 mt-sm-5 mt-4  read-more">Read More</a>
 				</div>
 				<div class="col-lg-6 left-wthree-img text-right">
 					<img src="images/b1.png" alt="" class="img-fluid mt-5" />
@@ -231,6 +247,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</div>
 				</div>
 			</div>
+			<a href="pricing.html" class="btn button-style button-style-2 mt-sm-5 mt-4  read-more">
+					Read More</a>
 		</div>
 	</section>
 	<!-- //services -->
@@ -358,24 +376,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="social-icons-footer mb-md-0 mb-3">
 					<ul class="list-unstyled">
 						<li>
-							<a href="#">
-								<i class="fab fa-facebook"></i>
-							</a>
+							<a href="#"><span class="fab fa-facebook"></span></a>
 						</li>
 						<li>
-							<a href="#">
-								<i class="fab fa-twitter"></i>
-							</a>
+							<a href="#"><span class="fab fa-twitter"></span></a>
 						</li>
 						<li>
-							<a href="#">
-								<i class="fab fa-google-plus"></i>
-							</a>
+							<a href="#"><span class="fab fa-google-plus"></span></a>
 						</li>
 						<li>
-							<a href="#">
-								<i class="fab fa-instagram"></i>
-							</a>
+							<a href="#"><span class="fab fa-instagram"></span></a>
 						</li>
 					</ul>
 				</div>
@@ -389,14 +399,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- //copyright -->
 				<!-- move top icon -->
 				<a href="#home" class="move-top text-center">
-					<span class="fa fa-level-up" aria-hidden="true"></span>
+					<i class="fa fa-level-up-alt" aria-hidden="true"></i>
 				</a>
 				<!-- //move top icon -->
 			</div>
 		</div>
 	</div>
 	<!-- //copyright bottom -->
-	<script src="js/index.js" ></script>
 </body>
 
 </html>
