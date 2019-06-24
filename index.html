@@ -31,9 +31,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			document.body.appendChild(script);
 			return script;
 		}
+		function promiseScript(src){
+			return new Promise(function(resolve, reject){
+				var script = document.createElement('script');
+				script.type= "text/javascript";
+				script.onload = resolve;
+				script.src = src;
+				document.body.appendChild(script);
+			})
+		}
+
 		setTimeout(function(){
-			insertScript("js/jquery-3.2.1.min.js", function(){
-				insertScript("js/index.js")
+			// insertScript("js/jquery-3.2.1.min.js", function(){
+			// 	insertScript("js/index.js")
+			// });
+			promiseScript("js/jquery-3.2.1.min.js").then(function(){
+				promiseScript("js/index.js");
 			})
 		},1000);
 
@@ -119,8 +132,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="w3ls_banner_txt">
 						<h3 class="w3ls_pvt-title">Deliver Knowledge <br><span>With Fun</span></h3>
 						<p class="text-sty-banner">UltronEle is a light, fast, simple yet interesting serverless e-learning CMS based on GatsbyJS. It aims to provide a easy-use product for tutors, teachers, instructors from all kinks of fields with near-zero efforts to setup their own authoring tool and content publish website.</p>
-						<a href="https://ultronele.netlify.com" target="_blank"
-							 class="btn button-style mt-md-5 mt-4 read-more">Get Started</a>
+						<div class="row">
+							<a href="https://ultronele.netlify.com" target="_blank"
+								 class="btn button-style mt-md-5 mt-4 read-more">Demo Site</a>
+							<a href="https://youtu.be/5ERLge93e6I" target="_blank" style="margin-left: 40px"
+								 class="btn button-purple mt-md-5 mt-4 read-more">Movie Clip</a>
+						</div>
 					</div>
 					<div class="banner-img">
 						<img src="images/banner-ovw2.png" alt="" class="img-fluid">
