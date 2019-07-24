@@ -5,16 +5,16 @@ import React from "react"
 const Header = ({ siteTitle, activeMenu }) => (
   <header>
     <div className="container-fluid">
-      <div className="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
+      <Link className="header d-lg-flex justify-content-between align-items-center py-3 px-sm-3">
         
-        <div id="logo">
+        <Link id="logo">
           <h1>
             <Link to="/">
               <span className="logo mr-2"><img src="./images/icon-puple-64.png" /></span>
               UltronEle
             </Link>
           </h1>
-        </div>
+        </Link>
         
         <div className="nav_w3ls">
           <nav>
