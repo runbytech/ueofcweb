@@ -1230,19 +1230,8 @@ button.btn-cont-w3 {
 .ftco-project .owl-dots {
     text-align: center; 
 }
-    
-.ftco-project .owl-dots .owl-dot {
-    width: 10px;
-    height: 10px;
-    margin: 5px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.1); 
-}
-      
-.ftco-project .owl-dots .owl-dot.active {
-    background: #05b993; 
-}
-  
+
+
 .project {
     position: relative;
     width: 100%;
@@ -1337,7 +1326,7 @@ button.btn-cont-w3 {
 
 @media (max-width: 767.98px) {
     .ftco-section {
-        padding: 6em 0; 
+        /* padding: 6em 0;  */
     } 
 }
   
