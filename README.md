@@ -1,6 +1,31 @@
 UltronEle Official Website
 ----------------------------
 
+
+
+### install
+
+```
+$ yarn
+```
+
+### local run
+
+
+```
+$ gatsby develop
+```
+
+### build to github pages
+
+
+```
+$ gatsby build --prefix-paths
+```
+
+
+### first creation
+
 @2019/06/10
 
 A bootstrap template from w3layouts
@@ -18,3 +43,5 @@ Used for UltronEle branding and social promotion...
 @2019/07/22 ~ 24
 
 to join Gatsby Partner Program
+
+

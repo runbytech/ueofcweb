@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: `/ueofcweb`,
   siteMetadata: {
     title: `UltronEle Official Website`,
     description: `Website for UltronEle promotion online.`,
