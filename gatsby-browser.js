@@ -11,9 +11,3 @@ import './static/css/style.css'  // web page style
 import './static/css/responsive.css'  // for mobile screen
 
 
-import jquery from 'jquery'
-const $ = window.jQuery;
-
-$(document).on('click', 'a[href="#"]', function (event) {
-  event.preventDefault();
-});

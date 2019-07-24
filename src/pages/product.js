@@ -4,11 +4,119 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import OwlCarousel from 'react-owl-carousel';
-import 'owl.carousel/dist/assets/owl.carousel.css';
-// import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../style/owl.theme.green.css'
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
+
+const CarouselScreens = () => {
+
+  const settings = {
+    autoplay: true,  
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
+
+  return (
+    <Slider {...settings}>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Hompage</a></h3>
+              <span>PC version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-course.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Course Detail</a></h3>
+              <span>PC version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-mobile.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Homepage</a></h3>
+              <span>Mobile version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-service.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Service Type</a></h3>
+              <span>Mobile version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-path.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Learning Path</a></h3>
+              <span>PC version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="item">
+        <div className="project">
+          <div className="img">
+            <img src="images/project-certificate.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <div className="text px-4">
+              <h3><a href="#">Create Certificate</a></h3>
+              <span>PC version</span>
+            </div>
+          </div>
+        </div>
+      </div>
+  </Slider>)
+}
 
 const ProductPage = () => (
   <Layout activeMenu="product">
@@ -25,84 +133,7 @@ const ProductPage = () => (
 
     <section className="ftco-section ftco-project " id="projects-section">
       <div className="container px-md-5">
-        <OwlCarousel
-            className="owl-theme"
-            loop
-            autoplay
-            center
-            items={1}
-            margin={30}
-            stagePadding={0}
-            dots={true}
-            responsive={{0: {items: 1},600: {items: 2},1000: {items: 3}
-          }}>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Hompage</a></h3>
-                  <span>PC version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-course.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Course Detail</a></h3>
-                  <span>PC version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-mobile.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Homepage</a></h3>
-                  <span>Mobile version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-service.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Service Type</a></h3>
-                  <span>Mobile version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-path.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Learning Path</a></h3>
-                  <span>PC version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="item">
-            <div className="project">
-              <div className="img">
-                <img src="images/project-certificate.jpg" className="img-fluid" alt="ultronele screenshot" />
-                <div className="text px-4">
-                  <h3><a href="#">Create Certificate</a></h3>
-                  <span>PC version</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </OwlCarousel>            
+        <CarouselScreens />
       </div>
     </section>
 

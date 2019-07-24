@@ -15,6 +15,6 @@ Used for UltronEle branding and social promotion...
 
 ### refactor to Gatsby verison
 
-@2019/07/22
+@2019/07/22 ~ 24
 
 to join Gatsby Partner Program

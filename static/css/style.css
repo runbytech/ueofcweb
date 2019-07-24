@@ -1212,15 +1212,6 @@ button.btn-cont-w3 {
 
 
 /* carousel gallery for product */
-.ftco-project .owl-carousel {
-    margin: 0; 
-}
-
-.ftco-project .owl-carousel .owl-stage-outer {
-    padding-top: 0;
-    padding-bottom: 0;
-    position: relative; 
-}
   
 .ftco-section {
     padding: 0 0 3em 0;
@@ -1234,7 +1225,7 @@ button.btn-cont-w3 {
 
 .project {
     position: relative;
-    width: 100%;
+    width: 90%;
     display: block;
     overflow: hidden;
     z-index: 0;
