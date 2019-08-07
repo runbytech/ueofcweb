@@ -52,7 +52,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="../images/project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Hompage</a></h3>
               <span>PC version</span>
