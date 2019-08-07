@@ -78,7 +78,7 @@ const PricePage = () => (
                 </div>
                 <div className="prices-bottom text-center">
                   <div className="prices-h border-bottom">
-                    <h4>Golden</h4>
+                    <h4>Golden MBR</h4>
                   </div>
                   <ul className="mt-4">
                       <li>Deployment Support</li>
