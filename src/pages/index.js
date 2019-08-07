@@ -19,7 +19,7 @@ const IndexPage = () => (
 				<div className="d-md-flex">
 					<div className="w3ls_banner_txt">
 						<h3 className="w3ls_pvt-title">Deliver Knowledge <br/><span>With Fun</span></h3>
-						<p className="text-sty-banner">UltronEle is a light, fast, simple yet interesting serverless e-learning CMS based on GatsbyJS. It aims to provide a easy-use product for tutors, teachers, instructors from all kinks of fields with near-zero efforts to setup their own authoring tool and content publish website.</p>
+						<p className="text-sty-banner">UltronEle is a light, fast, simple yet interesting serverless e-learning CMS based on GatsbyJS. It aims to provide a easy-use product for tutors, teachers, instructors from all kinds of fields with near-zero efforts to setup their own authoring tool and content publish website.</p>
 						<div className="row">
 							<a href="https://ultronele.netlify.com" target="_blank" rel="noopener noreferrer"
 								 className="btn button-style mt-md-5 mt-4 read-more">Demo Site</a>
