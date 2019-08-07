@@ -10,7 +10,7 @@ const Header = ({ siteTitle, activeMenu }) => (
         <div id="logo">
           <h1>
             <Link to="/">
-              <span className="logo mr-2"><img src="./images/icon-puple-64.png" /></span>
+              <span className="logo mr-2"><img src="../images/icon-puple-64.png" /></span>
               UltronEle
             </Link>
           </h1>
