@@ -52,7 +52,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="../images/project-home.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Hompage</a></h3>
               <span>PC version</span>
@@ -63,7 +63,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-course.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-course.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Course Detail</a></h3>
               <span>PC version</span>
@@ -74,7 +74,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-mobile.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-mobile.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Homepage</a></h3>
               <span>Mobile version</span>
@@ -85,7 +85,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-service.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-service.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Service Type</a></h3>
               <span>Mobile version</span>
@@ -96,7 +96,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-path.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-path.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Learning Path</a></h3>
               <span>PC version</span>
@@ -107,7 +107,7 @@ const CarouselScreens = () => {
       <div className="item">
         <div className="project">
           <div className="img">
-            <img src="./images/project-certificate.jpg" className="img-fluid" alt="ultronele screenshot" />
+            <img src="./project-certificate.jpg" className="img-fluid" alt="ultronele screenshot" />
             <div className="text px-4">
               <h3><a href="#">Create Certificate</a></h3>
               <span>PC version</span>
