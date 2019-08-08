@@ -11,7 +11,7 @@ const Header = ({ siteTitle, activeMenu }) => (
           <h1>
             <Link to="/">
               <span className="logo mr-2">
-                <img src="/icon-puple-64.png" />
+                <img src="/ueofcweb/images/icon-puple-64.png" />
               </span>
               UltronEle
             </Link>

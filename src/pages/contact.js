@@ -20,7 +20,7 @@ const ContactPage = () => (
       <div className="container pb-xl-5 pb-lg-3">
         <div className="row">
           <div className="col-lg-6">
-            <img src="/b2.png" alt="image" className="img-fluid" />
+            <img src="/ueofcweb/images/b2.png" alt="image" className="img-fluid" />
           </div>
           <div className="col-lg-6 mt-lg-0 mt-5">
             
