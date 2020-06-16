@@ -144,7 +144,7 @@ const IndexPage = () => (
             </div>
           </div>
         </div>
-        <a href="pricing.html" className="btn button-style button-style-2 mt-sm-5 mt-4 read-more">
+        <a href="price" className="btn button-style button-style-2 mt-sm-5 mt-4 read-more">
             Read More</a>
       </div>
     </section>
